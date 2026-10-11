@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NAMAASSO, association loi 1901 à Coulaines, accompagne les publics vers l'emploi et l'autonomie. Ateliers gratuits : Numérique, Mobilité, Administratif.">
+    <title>NAMAASSO Site Officiel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============ PRÉLOADER ============ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo" aria-hidden="true">
+                <span>N</span><span>A</span><span>M</span><span>A</span><span>S</span><span>S</span><span>O</span>
+            </div>
+            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+            <p class="preloader-text">Chargement</p>
+        </div>
+    </div>
+
+    <!-- ============ BLOBS MORPHOSE ============ -->
+    <div class="morph-bg" aria-hidden="true">
+        <svg class="morph-svg" viewBox="0 0 800 800" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="gradBlob1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ff7a00" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#ff2e7a" stop-opacity="0.2"/>
+                </linearGradient>
+                <linearGradient id="gradBlob2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0e4a8a" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#5e2b97" stop-opacity="0.2"/>
+                </linearGradient>
+                <linearGradient id="gradBlob3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffba00" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#ff7a00" stop-opacity="0.15"/>
+                </linearGradient>
+            </defs>
+            <path class="blob blob-1" fill="url(#gradBlob1)"/>
+            <path class="blob blob-2" fill="url(#gradBlob2)"/>
+            <path class="blob blob-3" fill="url(#gradBlob3)"/>
+        </svg>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ WHATSAPP FLOTTANT (TRÈS VISIBLE) ============ -->
+    <a href="https://wa.me/33695436834?text=Bonjour%20NAMAASSO%2C%20je%20souhaite%20avoir%20des%20informations."
+       class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter via WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.52 3.48A11.87 11.87 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.85c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.68a11.83 11.83 0 0 0 5.65 1.44h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.43zM12.06 21.5a9.6 9.6 0 0 1-4.9-1.34l-.35-.21-3.8 1 .99-3.7-.23-.38a9.55 9.55 0 0 1-1.47-5.1c0-5.28 4.3-9.58 9.6-9.58 2.56 0 4.97 1 6.78 2.81a9.53 9.53 0 0 1 2.81 6.78c0 5.28-4.3 9.58-9.6 9.58zm5.5-7.18c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.68-1.64-.93-2.24-.24-.59-.49-.51-.68-.52h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.31.18-1.43-.07-.12-.27-.2-.57-.35z"/>
+        </svg>
+        <span class="whatsapp-label">WhatsApp</span>
+    </a>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-container" data-aos="zoom-in">
+                <div class="logo-wrapper">
+                    <img src="images/logo.png" alt="Logo NAMAASSO" class="logo">
+                    <div class="logo-ring"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="multicolor-logo" aria-label="NAMAASSO">
+                    <span>N</span><span>A</span><span>M</span><span>A</span><span>S</span><span>S</span><span>O</span>
+                </h1>
+                <p class="slogan split-text">Nouvel Accompagnement vers la Mobilité et l'Autonomie</p>
+                <p class="slogan-line">Construire son autonomie, ouvrir son avenir ♡</p>
+                <div class="contact-info-header">
+                    <span class="info-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <b>Coulaines Le Mans Métropole</b>
+                    </span>
+                    <span class="info-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        06.95.43.68.34
+                    </span>
+                </div>
+                <div class="header-actions">
+                    <a class="btn btn-primary" href="tel:+33695436834">Appeler</a>
+                    <a class="btn btn-whatsapp" href="https://wa.me/33695436834" target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="btn btn-outline" href="#adherer">Adhérer 30 €</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+            <div class="container">
+                <a href="#qui" class="nav-link">Qui sommes-nous</a>
+                <a href="#ateliers" class="nav-link">Nos ateliers</a>
+                <a href="#pourqui" class="nav-link">Pour qui</a>
+                <a href="#adherer" class="nav-link">Adhérer</a>
+                <a href="#membres" class="nav-link">Notre équipe</a>
+                <a href="#partenariats" class="nav-link">Partenariats</a>
+                <a href="#temoignages" class="nav-link">Témoignages</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#localisation" class="nav-link">Localisation</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============ QUI SOMMES-NOUS ============ -->
+        <section id="qui" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">01</span>
+            <h2 class="reveal-title">Qui sommes-nous ?</h2>
+            <p class="fade-paragraph"><b>NAMAASSO</b> est une association loi 1901 à Coulaines (72190) Belle Croix. Accompagnement vers emploi et autonomie, gratuit, sans discrimination.</p>
+            <ul class="pro-list">
+                <li>Individuel ou petit groupe (4 max)</li>
+                <li>Gratuit sur RDV à Coulaines ou domicile</li>
+                <li>Tous publics : jeunes, adultes, RSA, allophones</li>
+            </ul>
+        </section>
+
+        <!-- ============ ATELIERS ============ -->
+        <section id="ateliers" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">02</span>
+            <h2 class="reveal-title">Nos 3 ateliers CAP Photos réelles 2026</h2>
+
+            <div class="grid3">
+                <article class="atelier tilt-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="atelier-img-wrap">
+                        <img src="images/cap-numerique.png" alt="Séance de l'atelier CAP Numérique">
+                        <span class="atelier-tag">Parcours 01</span>
+                        <div class="img-shine"></div>
+                    </div>
+                    <div class="atelier-body">
+                        <h3>CAP Numérique</h3>
+                        <p class="atelier-objective"><b>Objectif</b> ne plus avoir peur de l'ordi.</p>
+                        <ul>
+                            <li>Souris normale, écran débutant</li>
+                            <li>Allumer, clavier, souris</li>
+                            <li>Email, France Travail, CAF, AMELI</li>
+                            <li>1h30 / séance</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="atelier tilt-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="atelier-img-wrap">
+                        <img src="images/atelier-2.jpeg" alt="Séance de l'atelier CAP Mobilité">
+                        <span class="atelier-tag">Parcours 02</span>
+                        <div class="img-shine"></div>
+                    </div>
+                    <div class="atelier-body">
+                        <h3>CAP Mobilité</h3>
+                        <p class="atelier-objective"><b>Objectif</b> se déplacer en toute autonomie et ne plus dépendre des autres.</p>
+                        <ul>
+                            <li>Lecture de plans et cartes</li>
+                            <li>Utilisation des transports publics (Setram, SNCF)</li>
+                            <li>Applications mobiles de transport</li>
+                            <li>Repérage dans Le Mans et ses environs</li>
+                            <li>Préparation d'un trajet domicile → travail</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="atelier tilt-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="atelier-img-wrap">
+                        <img src="images/cap-administratif.jpeg" alt="Séance de l'atelier CAP Administratif">
+                        <span class="atelier-tag">Parcours 03</span>
+                        <div class="img-shine"></div>
+                    </div>
+                    <div class="atelier-body">
+                        <h3>CAP Administratif</h3>
+                        <p class="atelier-objective"><b>Objectif</b> gérer ses démarches et ses papiers en toute confiance.</p>
+                        <ul>
+                            <li>Comprendre un courrier administratif</li>
+                            <li>Remplir un dossier (CAF, France Travail, impôts)</li>
+                            <li>Créer et gérer ses comptes en ligne sécurisés</li>
+                            <li>Scanner, classer et archiver ses documents</li>
+                            <li>Préparer un entretien administratif</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ POUR QUI ============ -->
+        <section id="pourqui" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">03</span>
+            <h2 class="reveal-title">Pour qui ?</h2>
+            <p class="fade-paragraph">Nos accompagnements s'adressent à tous les publics : jeunes, adultes, personnes en situation de RSA, allophones...</p>
+        </section>
+
+        <!-- ============ ADHÉSION ============ -->
+        <section id="adherer" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">04</span>
+            <h2 class="reveal-title">Adhérer à NAMAASSO</h2>
+            <p class="fade-paragraph">Soutenez nos actions et devenez membre pour 30€ par an.</p>
+            <div class="qrwrap">
+                <div class="qr-block">
+                    <img src="images/qr-code.jpeg" alt="QR Code pour adhérer" class="qr-pulse">
+                </div>
+                <div class="qr-text">
+                    <h3>Devenir membre</h3>
+                    <p>Scannez ce QR code pour adhérer ou renouveler votre cotisation.</p>
+                    <a class="btn btn-primary" href="#contact">Demander une adhésion</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ MEMBRES / ASSOCIATION (SANS PHOTOS NI NOMS) ============ -->
+        <section id="membres" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">05</span>
+            <h2 class="reveal-title">NAMAASSO NOUVEL ACCOMPAGNEMENT VERS LA MOBILITÉ ET L'AUTONOMIE</h2>
+
+            <div class="assoc-info">
+                <p class="fade-paragraph"><b>SIRET :</b> 131 018 152 00010 <b>RNA :</b> W723018872</p>
+                <p class="fade-paragraph"><b>Association créée le :</b> 27/09/2026</p>
+                <p class="fade-paragraph"><b>3 dirigeants bénévoles 0 salarié</b></p>
+                <p class="fade-paragraph"><b>Présidente :</b> TOUCHARD NATHALIE</p>
+            </div>
+
+            <div class="roles-grid">
+                <article class="role-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="role-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+                    </div>
+                    <h3>Présidence</h3>
+                    <p>Direction & coordination de l'association, lien avec les partenaires institutionnels.</p>
+                </article>
+
+                <article class="role-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="role-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h3"/></svg>
+                    </div>
+                    <h3>Trésorerie</h3>
+                    <p>Gestion financière, suivi du budget et des subventions.</p>
+                </article>
+
+                <article class="role-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="role-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                    </div>
+                    <h3>Secrétariat</h3>
+                    <p>Rédaction des comptes rendus, suivi administratif et juridique.</p>
+                </article>
+            </div>
+
+            <p class="team-note">
+                Vous souhaitez rejoindre l'équipe bénévole ?
+                <a href="#contact">Écrivez-nous via le formulaire de contact</a>.
+            </p>
+        </section>
+
+        <!-- ============ NOS PARTENARIATS ============ -->
+        <section id="partenariats" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">06</span>
+            <h2 class="reveal-title">Nos partenariats</h2>
+
+            <div class="assoc-info">
+                <p class="fade-paragraph"><b>Association créée le 02/10/2026</b> Phase test 5 personnes oct-nov 2026</p>
+                <p class="fade-paragraph"><b>3 bénévoles 0 € salaire</b></p>
+                <p class="fade-paragraph"><em>Nous sommes en création. Nos partenariats sont en cours de construction.</em></p>
+            </div>
+
+            <div class="partenariat-grid">
+
+                <article class="partenariat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="partenariat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>
+                    </div>
+                    <h3>Financeurs 2027</h3>
+                    <ul class="pro-list">
+                        <li>Dossiers de demande de subvention en cours de dépôt pour 2027 (Ville + Département)</li>
+                        <li>Budget prévisionnel 2027 : Charges 1 000 € / Produits 3 500 € / Excédent 2 500 € pour 2028</li>
+                        <li>Détail disponible sur demande Toutes charges justifiées par factures au nom de NAMA AVENIR</li>
+                    </ul>
+                </article>
+
+                <article class="partenariat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="partenariat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Partenaires opérationnels</h3>
+                    <ul class="pro-list">
+                        <li>Démarchage en cours auprès des structures d'insertion et de cohésion sociale du territoire</li>
+                        <li>Structures municipales, départementales, insertion jeunes, mobilité</li>
+                    </ul>
+                </article>
+
+                <article class="partenariat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="partenariat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Accompagnement</h3>
+                    <ul class="pro-list">
+                        <li>Accompagnement prévu en 2027 par structure d'aide aux associations débutantes (DLA)</li>
+                    </ul>
+                </article>
+
+                <article class="partenariat-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="partenariat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Mise à jour</h3>
+                    <ul class="pro-list">
+                        <li>Cette page sera mise à jour au 1<sup>er</sup> trimestre 2027 après réponses des financeurs et signatures éventuelles de conventions d'orientation.</li>
+                        <li><b>Aucun logo ou nom de partenaire n'est affiché sans convention signée ou accord écrit.</b></li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <div class="partenariat-contact">
+                <h3>Contact partenariats</h3>
+                <p><b>TOUCHARD NATHALIE</b> Présidente</p>
+                <p>Téléphone : <a href="tel:+33695436834">06.95.43.68.34</a></p>
+                <p>Email : <a href="mailto:namaasso93@gmail.com">namaasso93@gmail.com</a></p>
+            </div>
+
+            <p class="team-note" style="margin-top:1.5rem;">
+                Dernière mise à jour : <b>octobre 2026</b>
+            </p>
+        </section>
+
+        <!-- ============ TÉMOIGNAGES ============ -->
+        <section id="temoignages" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">07</span>
+            <h2 class="reveal-title">Témoignages</h2>
+            <p class="fade-paragraph">Ils ont participé à nos ateliers. Voici ce qu'ils en disent.</p>
+
+            <div class="testimonials-grid">
+                <article class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M7 7h4v4H9c0 2 1 3 2 3v3c-3 0-4-2-4-5V7zm9 0h4v4h-2c0 2 1 3 2 3v3c-3 0-4-2-4-5V7z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        Grâce à l'atelier CAP Numérique, j'ai enfin créé ma boîte mail et je peux suivre mes démarches en ligne. Je ne dépendais plus de mes enfants.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?w=200&h=200&fit=crop&crop=faces" 
+                             alt="Portrait de Fatima, bénéficiaire" loading="lazy">
+                        <div>
+                            <p class="author-name">Fatima</p>
+                            <p class="author-detail">Bénéficiaire — Atelier Numérique</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M7 7h4v4H9c0 2 1 3 2 3v3c-3 0-4-2-4-5V7zm9 0h4v4h-2c0 2 1 3 2 3v3c-3 0-4-2-4-5V7z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        Avant, je prenais le taxi pour chaque rendez-vous médical. Aujourd'hui je prends le bus seule, je connais mon itinéraire. Un vrai soulagement.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?w=200&h=200&fit=crop&crop=faces" 
+                             alt="Portrait de Jean-Pierre, bénéficiaire" loading="lazy">
+                        <div>
+                            <p class="author-name">Jean-Pierre</p>
+                            <p class="author-detail">Bénéficiaire Atelier Mobilité</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M7 7h4v4H9c0 2 1 3 2 3v3c-3 0-4-2-4-5V7zm9 0h4v4h-2c0 2 1 3 2 3v3c-3 0-4-2-4-5V7z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        J'arrive enfin à comprendre les courriers de la CAF et à remplir mes dossiers seule. Les formateurs prennent vraiment le temps d'expliquer.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=200&h=200&fit=crop&crop=faces" 
+                             alt="Portrait de Samira, bénéficiaire" loading="lazy">
+                        <div>
+                            <p class="author-name">Samira</p>
+                            <p class="author-detail">Bénéficiaire Atelier Administratif</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M7 7h4v4H9c0 2 1 3 2 3v3c-3 0-4-2-4-5V7zm9 0h4v4h-2c0 2 1 3 2 3v3c-3 0-4-2-4-5V7z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        En tant que formatrice bénévole, je vois chaque semaine des personnes reprendre confiance. C'est ce qui donne du sens à notre engagement.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=200&h=200&fit=crop&crop=faces" 
+                             alt="Portrait de Nadia, formatrice" loading="lazy">
+                        <div>
+                            <p class="author-name">Nadia</p>
+                            <p class="author-detail">Formatrice bénévole</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial" data-aos="fade-up" data-aos-delay="500">
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M7 7h4v4H9c0 2 1 3 2 3v3c-3 0-4-2-4-5V7zm9 0h4v4h-2c0 2 1 3 2 3v3c-3 0-4-2-4-5V7z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        L'accompagnement individuel m'a aidé à préparer mon entretien d'embauche. J'ai obtenu le poste. Merci NAMAASSO !
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces" 
+                             alt="Portrait de Mehdi, bénéficiaire" loading="lazy">
+                        <div>
+                            <p class="author-name">Mehdi</p>
+                            <p class="author-detail">Bénéficiaire Accompagnement individuel</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial" data-aos="fade-up" data-aos-delay="600">
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M7 7h4v4H9c0 2 1 3 2 3v3c-3 0-4-2-4-5V7zm9 0h4v4h-2c0 2 1 3 2 3v3c-3 0-4-2-4-5V7z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        Nous soutenons NAMAASSO depuis sa création. Leur approche humaine et concrète fait une réelle différence sur le terrain.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces" 
+                             alt="Portrait de Claire, partenaire institutionnel" loading="lazy">
+                        <div>
+                            <p class="author-name">Claire</p>
+                            <p class="author-detail">Partenaire institutionnel</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">08</span>
+            <h2 class="reveal-title">Nous contacter</h2>
+
+            <div class="contact-channels">
+                <a href="https://wa.me/33695436834?text=Bonjour%20NAMAASSO%2C%20je%20souhaite%20avoir%20des%20informations."
+                   class="channel-card channel-whatsapp" target="_blank" rel="noopener" data-aos="fade-up">
+                    <span class="channel-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.38 8.38 0 0 1-4-1L3 20l1-5a8.5 8.5 0 1 1 17-3.5z"/><path d="M9 10c.5 2 2 3.5 4 4l1-1.5c.3-.4 1.5.3 2 0l1-.5"/></svg>
+                    </span>
+                    <h3>WhatsApp</h3>
+                    <p>Discussion directe et rapide</p>
+                </a>
+                <a href="mailto:namaasso93@gmail.com?subject=Demande%20d'information%20-%20NAMAASSO"
+                   class="channel-card channel-email" data-aos="fade-up" data-aos-delay="100">
+                    <span class="channel-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                    </span>
+                    <h3>Email</h3>
+                    <p>namaasso93@gmail.com</p>
+                </a>
+                <a href="tel:+33695436834" class="channel-card channel-phone" data-aos="fade-up" data-aos-delay="200">
+                    <span class="channel-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </span>
+                    <h3>Téléphone</h3>
+                    <p>06.95.43.68.34</p>
+                </a>
+            </div>
+
+            <form id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+            </form>
+        </section>
+
+        <!-- ============ LOCALISATION ============ -->
+        <section id="localisation" class="card morph-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <span class="section-index">09</span>
+            <h2 class="reveal-title">Nous localiser</h2>
+            <p class="fade-paragraph">Retrouvez-nous à <b>Coulaines, quartier Belle Croix</b>, au cœur de Le Mans Métropole.</p>
+            <div class="map-wrapper">
+                <iframe
+                    title="Carte de localisation NAMAASSO — Coulaines Belle Croix"
+                    src="https://www.google.com/maps?q=Belle+Croix,+Coulaines,+72190,+France&output=embed"
+                    width="100%" height="420" style="border:0;"
+                    allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <aside class="map-overlay">
+                    <div class="map-card">
+                        <h3>NAMAASSO</h3>
+                        <p>Belle Croix — 72190 Coulaines</p>
+                        <a class="btn btn-primary"
+                           href="https://www.google.com/maps/dir/?api=1&destination=Belle+Croix,+Coulaines,+72190,+France"
+                           target="_blank" rel="noopener">Itinéraire</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ============ MENTIONS LÉGALES & RGPD ============ -->
+        <section id="mentions" class="legal" data-aos="fade-up">
+            <h3>Mentions légales & RGPD</h3>
+
+            <h4>Éditeur du site</h4>
+            <p>
+                <b>NAMAASSO NOUVEL ACCOMPAGNEMENT VERS LA MOBILITE ET L'AUTONOMIE</b><br>
+                Siège : 1 IMP DE LA BELLE CROIX 72190 COULAINES<br>
+                SIRET : 131 018 152 00010<br>
+                SIREN : 131 018 152<br>
+                RNA : W723018872<br>
+                APE : 88.99B Action sociale sans hébergement n.c.a.<br>
+                ESS : Oui<br>
+                Active depuis : 27/09/2026 (Avis INSEE du 06/10/2026)<br>
+                Association déclarée loi 1901
+            </p>
+
+            <h4>Directrice de publication</h4>
+            <p>
+                TOUCHARD NATHALIE Présidente<br>
+                Contact : <a href="tel:+33695436834">06.95.43.68.34</a> / <a href="mailto:namaasso93@gmail.com">namaasso93@gmail.com</a>
+            </p>
+
+            <h4></h4>
+            <p></p>
+
+            <h4></h4>
+            <p>
+            
+            </p>
+
+            <h4></h4>
+            <p></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <p class="footer-brand">NAMAASSO</p>
+                <p>Association loi 1901 Coulaines (72190)</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-label">Contact</p>
+                <p>06.95.43.68.34</p>
+                <p>namaasso93@gmail.com</p>
+                <p>Belle Croix, 72190 Coulaines</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-label">Navigation</p>
+                <a href="#qui">Qui sommes-nous</a>
+                <a href="#ateliers">Nos ateliers</a>
+                <a href="#membres">Notre équipe</a>
+                <a href="#partenariats">Partenariats</a>
+                <a href="#temoignages">Témoignages</a>
+                <a href="#contact">Contact</a>
+                <a href="#mentions">Mentions légales</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NAMAASSO Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
